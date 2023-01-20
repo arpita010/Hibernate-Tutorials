@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://127.0.0.1:3308/HibernateDB</property>
+<property name="connection.username">root</property>
+<property name="connection.password"></property>
+<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+<property name="hbm2ddl.auto">update</property>
+<property name="show_sql">true</property>
+<property name="format_sql">true</property>
+
+
+<property name="cache.use_second_level_cache">true</property>
+<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+<!-- <mapping class="com.pack1.Student" />
+<mapping class="com.pack1.Address"/>
+<mapping class="com.pack1.ParentClass"/>
+<mapping class="com.mappingPackage.Question" />
+<mapping class="com.mappingPackage.Answer"/>
+ -->
+<!-- 
+<mapping class="com.OneToMany.Parent"/>
+<mapping class="com.OneToMany.Child"/>
+<mapping class="com.ManyToMany.Employee"/>
+<mapping class="com.ManyToMany.Project"/>
+
+<mapping class="com.ObjectStates.Person"/>
+ -->
+ 
+ <mapping class="com.hql.Course"/>
+ <mapping class="com.secondCache.Department"/>
+ <mapping resource="com/mapping/xml/Teacher.hbm.xml"/>
+<!--  <mapping class="com.pack1.Order"/> -->
+</session-factory>
+</hibernate-configuration>	
